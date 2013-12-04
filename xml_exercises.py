@@ -31,5 +31,11 @@ def test_getting_type_by_name():
     eq_('facts', get_type_by_name('aku ankka', MY_SMALL_XML))
     eq_('documentation', get_type_by_name('Robot Framework User Guide', MY_SMALL_XML))
 
+def get_names_and_types(xml_string):
+    raise NotImplementedError('Implement this')
+
+def test_getting_names_and_types():
+    ok_(('aku ankka', 'facts') in get_names_and_types(MY_SMALL_XML))
+
 # SHOW ROBOT FRAMEWORK REPORTING AND HOW XML IS HANDLED THERE!!!!!!
 
